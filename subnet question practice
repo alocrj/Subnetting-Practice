@@ -1,0 +1,31 @@
+-------- QUESTION --------
+Design and implement a network for TechNova.com with 35 Employees, including Analysts, Team Leads, and IT Support.  
+
+- Use the available IP address space 172.16.5.0/27  
+- Reserve the first 2 IP addresses of the network.  
+- Set the network for VLAN 55.  
+- D1 must be the DHCP server.  
+- P2 must be the DHCP client.  
+
+-------- TASK --------
+1. Determine the number of host bits required.  	
+ans: 6bits
+2. Calculate the network IP, valid host range, and broadcast address.  
+ans:	
+	Network: 172.16.5.0
+	1st: 172.16.5.1 /26
+	Last: 172.16.5.62
+	Broadcast: 172.16.5.63 255.255.255.192
+3. Identify the next network after this subnet. 
+	172.16.5.64 
+4. Assign the first valid IP to D1 (DHCP server) and the second valid IP to P2 (DHCP client).
+
+172.16.5.0/27
+Convert= 6bits
+Subtract: /32 - 6bits = 26
+I: 4th, 64i
+
+Network 172.16.5.0
+1st: 172.16.5.1 /26
+Last: 172.16.5.62
+Broadcast: 172.16.5.63 255.255.255.192
