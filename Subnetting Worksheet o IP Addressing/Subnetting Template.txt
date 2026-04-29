@@ -1,0 +1,42 @@
+Design and implement a network for TechCorp.com with 50 hosts.
+- available IP address space 10.10.20.0/26
+
+
+C:6bits
+S:/32 - 6bits = 26
+I: 4th, 64i
+
+
+10.10.20.0/26
+1st: 10.10.20.1
+last: 10.10.10.62
+B: 10.10.20.63
+
+not network: 10.10.20.64 255.255.255.192
+
+Design and implement a network for NetSolutions.com with 100 hosts.
+- Use the available IP address space 192.168.50.0/25
+- Reserve the first 2 IP addresses of the network
+- Set the network for VLAN 30
+- D1 must be the DHCP server
+- D2 must be the DHCP client
+
+---------- COMPUTE ----------
+1. Convert CIDR to bits:
+   Convert: 25 = 7 bits
+
+2. Subtract bits from 32 to find subnet mask:
+   Subtract: /32 - 7 = /25 (Octet, 128i)
+
+3. Compute network IP:
+   IPasok: 32i sa 4th octet = 192.168.50.0/25
+
+4. Network Details:
+   Network IP (Company) = 192.168.50.0 255.255.255.128
+   Valid Range:
+     - First Valid IP = 192.168.50.1
+     - Last Valid IP = 192.168.50.126
+   Broadcast/Last IP = 192.168.50.127
+
+5. NOT Network (Next subnet):
+   NOT Network (NOT Company) = 192.168.50.128 255.255.255.128
